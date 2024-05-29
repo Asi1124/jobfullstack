@@ -19,6 +19,12 @@ class PublicationFactory extends Factory
         return [
             'title' => $this->faker->name,
             'description' => $this->faker->text,
+            'photos' =>$this->faker->randomElements([
+                $this->faker->imageUrl(),
+                $this->faker->imageUrl(),
+                $this->faker->imageUrl(),
+
+            ], rand(1, 3)),
             'price' => $this->faker->numberBetween(1.00, 1000.00)
         ];
     }

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->json('photo_urls');
+            $table->json('photos');
             $table->decimal('price',8,2);
             $table->timestamps();
         });

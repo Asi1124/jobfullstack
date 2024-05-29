@@ -9,8 +9,11 @@ class Publication extends Model
 {
     use HasFactory;
 
-    public function Photo()
-    {
-        return $this->hasMany(PublicationPhoto::class);
-    }
+    protected $fillable = [
+        'title', 'description', 'photos', 'price',
+    ];
+
+    protected $casts = [
+        'photos' => 'array',
+    ];
 }

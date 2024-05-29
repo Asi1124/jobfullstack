@@ -10,4 +10,8 @@ class PageController extends Controller
     public function index(){
         return Inertia::render('Home');
     }
+
+    public function create(){
+        return Inertia::render('Create');
+    }
 }
